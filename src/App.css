@@ -133,7 +133,23 @@ animation: float2 18s ease-in-out infinite alternate; opacity: 0.6; }
 .btn:hover { background: #ffffff; border-color: var(--border); color: var(--text); }
 .btn.primary:hover { background: var(--primary); color: #ffffff; border-color: var(--primary); }
 
+/* Responsive */
 @media (max-width: 900px) {
-  .grid-layout { grid-template-columns: 1fr; }
-  .sidebar { position: relative; top: 0; }
+  .grid-layout { grid-template-columns: 1fr; gap: 16px; }
+  .navbar { padding: 14px 0; }
+  .nav-inner { width: min(1100px, 94%); }
+  .brand-name { font-size: 18px; }
+  .brand-role { font-size: 11px; }
+  .hero { grid-template-columns: 80px 1fr; gap: 14px; }
+  .hero .avatar { width: 80px; height: 80px; border-radius: 12px; }
+  .page h1 { font-size: 28px; }
+  .page h2 { font-size: 22px; }
+  .content { padding: 24px 0; }
+}
+
+@media (max-width: 520px) {
+  .nav-links { display: none; }
+  .hero { grid-template-columns: 1fr; }
+  .hero .avatar { width: 96px; height: 96px; }
+  .cta-row { gap: 8px; }
 }
